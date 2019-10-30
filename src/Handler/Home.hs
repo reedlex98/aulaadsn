@@ -32,5 +32,5 @@ getHomeR = do
             <h1>
                 OLA MUNDO
             <button onclick="ola()" class="btn btn-danger">
-                OK
+                KO
         |]
