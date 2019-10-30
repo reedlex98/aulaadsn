@@ -33,4 +33,5 @@ getHomeR = do
                 OLA MUNDO
             <button onclick="ola()" class="btn btn-danger">
                 KO
+            <img src=@{StaticR coelhao_jpg}>
         |]
