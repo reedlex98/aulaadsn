@@ -13,7 +13,7 @@ import Text.Lucius
 import Text.Julius
 
 getPage1R :: Handler Html
-get1R = do
+getPage1R  = do
     defaultLayout $ do
         addStylesheet (StaticR css_bootstrap_css)
         toWidgetHead $(juliusFile "templates/page1.julius")
@@ -21,7 +21,7 @@ get1R = do
         $(whamletFile "templates/page1.hamlet")
 
 getPage2R :: Handler Html
-get2R = do
+getPage2R  = do
     defaultLayout $ do
         addStylesheet (StaticR css_bootstrap_css)
         $(whamletFile "templates/page2.hamlet")
