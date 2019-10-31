@@ -1,0 +1,8 @@
+<h1>
+    Pagina2
+
+<div>
+    UMA div 2
+
+<a href=@{HomeR}>
+    Voltar

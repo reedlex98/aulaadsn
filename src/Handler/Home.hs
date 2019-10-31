@@ -18,6 +18,12 @@ get1R = do
         toWidgetHead $(luciusFile "templates/page1.lucius")
         $(whamletFile "templates/page1.hamlet")
 
+getPage2R :: Handler Html
+get2R = do
+    defaultLayout $ do
+        addStylesheet (StaticR css_bootstrap_css)
+        $(whamletFile "templates/page2.hamlet")
+
 getHomeR :: Handler Html
 getHomeR = do 
     defaultLayout $
@@ -35,10 +41,23 @@ getHomeR = do
             h1{
                 color: red;
             }
+            ul{
+                list-style:none;
+            }
+            li{
+                display: inline-block
+            }
         |]
         [whamlet|
             <h1>
                 OLA MUNDO
+            <ul>
+                <li>
+                    <a href=@{Page1R}
+                        Pagina 1
+                <li>
+                    <a href=@{Page2R}
+                        Pagina 2
             <button onclick="ola()" class="btn btn-danger">
                 KO
             <img src=@{StaticR coelhao_jpg}>
