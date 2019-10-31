@@ -9,6 +9,8 @@ module Handler.Home where
 import Import
 -- import Network.HTTP.Types.Status
 import Database.Persist.Postgresql
+import Text.Lucius
+import Text.Julius
 
 getPage1R :: Handler Html
 get1R = do
