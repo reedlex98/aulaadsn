@@ -55,10 +55,10 @@ getHomeR = do
                 OLA MUNDO
             <ul>
                 <li>
-                    <a href=@{Page1R}
+                    <a href=@{Page1R}>
                         Pagina 1
                 <li>
-                    <a href=@{Page2R}
+                    <a href=@{Page2R}>
                         Pagina 2
             <button onclick="ola()" class="btn btn-danger">
                 KO
