@@ -31,8 +31,8 @@ getHomeR = do
     defaultLayout $
         do
         -- remoto
-        addScriptRemote "https://code.jquery.com/jquery-3.4.1.slim.js"
-        addStylesheet (StaticR css_bootstrap_css)
+        -- addScriptRemote "https://code.jquery.com/jquery-3.4.1.slim.js"
+        -- addStylesheet (StaticR css_bootstrap_css)
         -- local
         toWidgetHead [julius|
             function ola(){
@@ -126,16 +126,16 @@ getHomeR = do
                 <div class="logo-container">
                     <h2>
                         Cook Time!
-            <nav>
-                <ul>
-                    <li>
-                        Home
+                <nav>
+                    <ul>
+                        <li>
+                            Home
 
-                    <li>
-                        About
+                        <li>
+                            About
 
-                    <li>
-                        Dish Search
+                        <li>
+                            Dish Search
             <div class="hero">
                 <div class="hero-text">
                     <h1>
