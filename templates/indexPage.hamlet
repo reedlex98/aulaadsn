@@ -1,21 +1,20 @@
 <header>
     <div class="logo-container">
-        <h2>Cook Time!
-    
+        <h2>
+            Cook Time!
     <nav>
         <ul>
             <li>
                 Home
-            
             <li>
                 About
-            
             <li>
                 Dish Search
-                
 <div class="hero">
     <div class="hero-text">
-        <h1>- Cook Time -
-        <p>Search for several different dish recipes and get started cooking!
-        <button class="button">Get Started
-    
+        <h1>
+            - Cook Time -
+        <p>
+            Search for several different dish recipes and get started cooking!
+        <button class="button">
+            Get Started
