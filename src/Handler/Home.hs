@@ -40,15 +40,15 @@ getHomeR = do
             }
         |]
         toWidgetHead [lucius|
-            @import url('https://fonts.googleapis.com/css?family=Cookie&display=swap');
+            @import url("https://fonts.googleapis.com/css?family=Cookie&display=swap");
 
             *{
                 box-sizing: border-box;
             }
             
             @font-face{
-                src: 'https://fonts.googleapis.com/css?family=Cookie&display=swap';
-                font-family: 'Cookie', cursive ;
+                src: "https://fonts.googleapis.com/css?family=Cookie&display=swap";
+                font-family: "Cookie", cursive ;
             }
             
             body{
@@ -72,7 +72,7 @@ getHomeR = do
                 padding: 0 50px;
                 align-self: center;
                 box-shadow: 0 0 5px 0px #000;    
-                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
             }
             
             header nav ul{
@@ -108,7 +108,7 @@ getHomeR = do
                 align-items: center;
                 text-align: center;
                 margin-top: 200px;
-                font-family: 'Cookie', cursive !important;
+                font-family: "Cookie", cursive !important;
                 font-size: 2em;
                 color: #E3D081;
                 width: 500px;
@@ -134,8 +134,8 @@ getHomeR = do
         |]
         [whamlet|
             <header>
-            <div class="logo-container">
-                <h2>Cook Time!
+                <div class="logo-container">
+                    <h2>Cook Time!
             
             <nav>
                 <ul>
