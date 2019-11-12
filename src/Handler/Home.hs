@@ -35,5 +35,4 @@ getHomeR = do
         -- addStylesheet (StaticR css_bootstrap_css)
         addStylesheet (StaticR css_indexPage_css)
         -- local
-        toWidgetHead $(luciusFile "templates/indexPage.lucius")
         $(whamletFile "templates/indexPage.hamlet")
