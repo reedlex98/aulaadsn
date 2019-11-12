@@ -1,6 +1,6 @@
 <header>
     <div class="logo-container">
-        <h2>
+        <h2 class="logo">
             Cook Time!
     <nav>
         <ul>
@@ -10,11 +10,11 @@
                 About
             <li>
                 Dish Search
-<div class="hero">
+<div class="hero-container">
     <div class="hero-text">
-        <h1>
+        <h1 class="hero-title">
             - Cook Time -
-        <p>
+        <p class="hero-span">
             Search for several different dish recipes and get started cooking!
-        <button class="button">
+        <button class="hero-button">
             Get Started

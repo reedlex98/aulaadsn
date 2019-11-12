@@ -30,7 +30,7 @@ header{
     padding: 0 50px;
     align-self: center;
     box-shadow: 0 0 5px 0px #000;    
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif !important;
 }
 
 header nav ul{
@@ -47,7 +47,7 @@ header nav ul li{
     font-size: .8em;
 }
 
-.hero{
+.hero-container{
     position: absolute;
     width: 100vw;
     height: 100vh;
@@ -66,18 +66,21 @@ header nav ul li{
     align-items: center;
     text-align: center;
     margin-top: 200px;
-    font-family: 'Cookie', cursive !important;
     font-size: 2em;
     color: #E3D081;
     width: 500px;
+}
+
+.hero-title, .hero-span{
+    font-family: 'Cookie', cursive !important;
     text-shadow: 0 0 5px #000;
 }
 
-.hero-text p{
+.hero-span {
     margin-top: -20px;
 }
 
-.button{
+.hero-button{
     padding: 20px 75px;
     outline: none;
     border: 0;
@@ -86,7 +89,7 @@ header nav ul li{
     background-color: rgba(235, 101, 52, 0.74);
 }
 
-.button:hover{
+.hero-button:hover{
     background-color: rgba(235, 101, 52, 0.993);
 }
 
