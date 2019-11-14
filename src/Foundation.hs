@@ -24,7 +24,6 @@ mkYesodData "App" $(parseRoutesFile "config/routes")
 instance Yesod App where
     makeLogger = return . appLogger
 
-
     authRoute _ = Just EntrarR
 
     isAuthorized HomeR _ = return Authorized
