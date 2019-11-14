@@ -15,23 +15,25 @@ import Text.Julius
 -- renderDivs
 formUsu :: Form (Usuario, Text)
 formUsu = renderBootstrap $ (,)
-    <$> (Usuario
+    <$> (Usuario 
         <$> areq textField "Nome: " Nothing
-        <*> areq emailField "Email: " Nothing
+        <*> areq emailField "E-mail: " Nothing
         <*> areq passwordField "Senha: " Nothing)
-    <*> areq passwordField "Digite novamente: " Nothing
-    
+    <*> areq passwordField "Digite Novamente: " Nothing
+
 getUsuarioR :: Handler Html
-getUsuarioR = do
-    (widget, _) <- generateFormPost formUsu
+getUsuarioR = do 
+    (widget,_) <- generateFormPost formUsu
     msg <- getMessage
-    defaultLayout $
+    defaultLayout $ 
         [whamlet|
-            $maybe mensa <- msg
+            $maybe mensa <- msg 
                 <div>
-                    ^{msg}
+                    ^{mensa}
+            
             <h1>
                 CADASTRO DE USUARIO
+            
             <form method=post action=@{UsuarioR}>
                 ^{widget}
                 <input type="submit" value="Cadastrar">
@@ -40,20 +42,20 @@ getUsuarioR = do
 postUsuarioR :: Handler Html
 postUsuarioR = do 
     ((result,_),_) <- runFormPost formUsu
-    case result of
-        FormSuccess (usuario,veri) -> do
-            if (usuarioSenha usuario == veri) then do
-                runDB $ insert usuario
-                setMessage [shamlet| 
+    case result of 
+        FormSuccess (usuario,veri) -> do 
+            if (usuarioSenha usuario == veri) then do 
+                runDB $ insert usuario 
+                setMessage [shamlet|
                     <div>
                         USUARIO INCLUIDO
                 |]
                 redirect UsuarioR
-            else do
+            else do 
                 setMessage [shamlet|
                     <div>
                         SENHA E VERIFICACAO N CONFEREM
                 |]
                 redirect UsuarioR
-        _ -> redirect HomeR 
-        
+        _ -> redirect HomeR
+
