@@ -33,6 +33,7 @@ getHomeR = do
         -- remoto
         -- addScriptRemote "https://code.jquery.com/jquery-3.4.1.slim.js"
         -- addStylesheet (StaticR css_bootstrap_css)
-        addStylesheet (StaticR css_indexPage_css)
+        -- addStylesheet (StaticR css_indexPage_css)
+        toWidgetHead $(luciusFile "templates/indexPage.lucius")
         -- local
         $(whamletFile "templates/indexPage.hamlet")
