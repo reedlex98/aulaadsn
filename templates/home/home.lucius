@@ -2,10 +2,6 @@
 *{
     box-sizing: border-box;
 }
-@font-face{
-    src: 'https://fonts.googleapis.com/css?family=Cookie&display=swap';
-    font-family: 'Cookie', cursive ;
-}
 body{
     margin: 0;
     padding: 0;
