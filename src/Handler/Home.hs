@@ -14,10 +14,5 @@ import Text.Julius
 
 getHomeR :: Handler Html
 getHomeR = do 
-    defaultLayout $
-        do
-        -- remoto
-        -- addScriptRemote "https://code.jquery.com/jquery-3.4.1.slim.js"
-        addStylesheet (StaticR css_bootstrap_css)
-        -- addStylesheet (StaticR css_indexPage_css)
+    defaultLayout $ do
         $(widgetFile "/home/home")
