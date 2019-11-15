@@ -12,20 +12,6 @@ import Database.Persist.Postgresql
 import Text.Lucius
 import Text.Julius
 
-getPage1R :: Handler Html
-getPage1R  = do
-    defaultLayout $ do
-        addStylesheet (StaticR css_bootstrap_css)
-        toWidgetHead $(juliusFile "templates/page1.julius")
-        toWidgetHead $(luciusFile "templates/page1.lucius")
-        $(whamletFile "templates/page1.hamlet")
-
-getPage2R :: Handler Html
-getPage2R  = do
-    defaultLayout $ do
-        addStylesheet (StaticR css_bootstrap_css)
-        $(whamletFile "templates/page2.hamlet")
-
 getHomeR :: Handler Html
 getHomeR = do 
     defaultLayout $
@@ -34,6 +20,4 @@ getHomeR = do
         -- addScriptRemote "https://code.jquery.com/jquery-3.4.1.slim.js"
         addStylesheet (StaticR css_bootstrap_css)
         -- addStylesheet (StaticR css_indexPage_css)
-        toWidgetHead $(luciusFile "templates/indexPage.lucius")
-        -- local
-        $(whamletFile "templates/indexPage.hamlet")
+        $(widgetFile "/home/home")
