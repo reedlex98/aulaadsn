@@ -49,7 +49,7 @@ isUsuario = do
         Just _ -> return Authorized
 
 type Form a = Html -> MForm Handler (FormResult a, Widget)
-    
+
 instance YesodPersist App where
     type YesodPersistBackend App = SqlBackend
     runDB action = do

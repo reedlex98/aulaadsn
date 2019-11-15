@@ -7,10 +7,10 @@
 module Handler.Usuario where
 
 import Import
--- import Network.HTTP.Types.Status
-import Database.Persist.Postgresql
 import Text.Lucius
 import Text.Julius
+--import Network.HTTP.Types.Status
+import Database.Persist.Postgresql
 
 -- renderDivs
 formUsu :: Form (Usuario, Text)
@@ -58,4 +58,8 @@ postUsuarioR = do
                 |]
                 redirect UsuarioR
         _ -> redirect HomeR
+
+
+
+
 

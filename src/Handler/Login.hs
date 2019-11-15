@@ -7,10 +7,10 @@
 module Handler.Login where
 
 import Import
--- import Network.HTTP.Types.Status
-import Database.Persist.Postgresql
 import Text.Lucius
 import Text.Julius
+--import Network.HTTP.Types.Status
+import Database.Persist.Postgresql
 
 -- renderDivs
 formLogin :: Form (Text, Text)
@@ -40,6 +40,9 @@ postEntrarR :: Handler Html
 postEntrarR = do 
     ((result,_),_) <- runFormPost formLogin
     case result of 
+        FormSuccess ("root@root.com","root125") -> do 
+            setSession "_NOME" "admin"
+            redirect AdminR
         FormSuccess (email,senha) -> do 
            -- select * from usuario where email=digitado.email
            usuario <- runDB $ getBy (UniqueEmailRest email)
@@ -66,3 +69,13 @@ postSairR :: Handler Html
 postSairR = do 
     deleteSession "_NOME"
     redirect HomeR
+
+getAdminR :: Handler Html
+getAdminR = do 
+    defaultLayout [whamlet|
+        <h1>
+            BEM-VINDO MEU REI!
+    |]
+
+
+
