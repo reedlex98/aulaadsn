@@ -20,7 +20,7 @@ header{
     box-shadow: 0 0 5px 0px #000;    
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif !important;
 }
-header .tiny{
+header.tiny{
     position: relative;
     top: 25px;
     width: 70vw;
