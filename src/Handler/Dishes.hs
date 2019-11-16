@@ -15,4 +15,6 @@ import Text.Julius
 getDishesR :: Handler Html
 getDishesR = do 
     defaultLayout $ do
+        $(luciusFile "/general/general.lucius")
+        $(widgetFile "/header/header")
         $(widgetFile "/dishes/dishes")

@@ -1,0 +1,13 @@
+<header .tiny>
+    <div class="logo-container">
+        <h2 class="logo">
+            Cook Time!
+    <nav>
+        <ul>
+            <li>
+                Home
+            <li>
+                About
+            <li>
+                <a href=@{DishesR}>
+                    Dish Search
