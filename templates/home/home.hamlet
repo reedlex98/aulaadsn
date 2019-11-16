@@ -1,4 +1,4 @@
-<header>
+<header .tiny>
     <div class="logo-container">
         <h2 class="logo">
             Cook Time!
@@ -9,7 +9,8 @@
             <li>
                 About
             <li>
-                Dish Search
+                <a href=@{DishesR}>
+                    Dish Search
 <div class="hero-container" >
     <div class="hero-text">
         <h1 class="hero-title">

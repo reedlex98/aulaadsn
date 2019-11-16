@@ -1,0 +1,13 @@
+.search-form{
+    align-self: center;
+}
+
+.search-form input{
+    padding: 10px 25px;
+}
+
+.dishes-available{
+    width: 75vw;
+    height: 50vh;
+    border: 1px solid black;
+}

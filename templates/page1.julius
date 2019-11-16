@@ -1,4 +1,0 @@
-function page1(){
-    alert("Page1");
-}
-page1();

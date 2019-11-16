@@ -3,7 +3,8 @@
 /favicon.ico FaviconR GET
 /robots.txt RobotsR GET
 
-/ HomeR GET 
+/         HomeR GET
+/dishes   DishesR GET
 
 /cadastro UsuarioR GET POST
 /entrar   EntrarR  GET POST
