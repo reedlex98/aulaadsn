@@ -16,5 +16,7 @@ getHomeR :: Handler Html
 getHomeR = do 
     defaultLayout $ do
         toWidgetHead $(luciusFile "templates/general/general.lucius")
+        toWidgetHead $(luciusFile "templates/general/consentment-banner.lucius")
+        toWidgetHead $(juciusFile "templates/general/consentment-banner.jucius")
         $(widgetFile "/header/header")
         $(widgetFile "/hero/hero")

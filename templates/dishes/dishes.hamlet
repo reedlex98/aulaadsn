@@ -1,17 +1,3 @@
-<header .full>
-    <div class="logo-container">
-        <h2 class="logo">
-            Cook Time!
-    <nav>
-        <ul>
-            <li>
-                Home
-            <li>
-                About
-            <li>
-                <a href=@{DishesR}>
-                    Dish Search
-                    
 <form .search-form>
     <input type="text" placeholder="Name, Ingredients...">
     <button id="#search">
