@@ -15,6 +15,6 @@ import Text.Julius
 getHomeR :: Handler Html
 getHomeR = do 
     defaultLayout $ do
-        $(luciusFile "/templates/general/general.lucius")
+        toWidgetHead $(luciusFile "templates/general/general.lucius")
         $(widgetFile "/header/header")
         $(widgetFile "/hero/hero")
