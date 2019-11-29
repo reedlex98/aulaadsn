@@ -15,7 +15,7 @@ import Text.Julius
 getDishesR :: Handler Html
 getDishesR = do 
     defaultLayout $ do
-        headerSize <- full
+        headerSize <- "full"
         toWidgetHead $(luciusFile "templates/general/general.lucius")
         $(widgetFile "/header/header")
         $(widgetFile "/dishes/dishes")

@@ -1,4 +1,4 @@
-<header .#{headerSize}>
+<header class=#{headerSize}>
     <div class="logo-container">
         <h2 class="logo">
             Cook Time!
