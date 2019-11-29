@@ -15,7 +15,7 @@ import Text.Julius
 getHomeR :: Handler Html
 getHomeR = do 
     defaultLayout $ do
-        headerSize <- tiny
+        headerSize <- full
         toWidgetHead $(luciusFile "templates/general/general.lucius")
         $(widgetFile "/header/header")
         $(widgetFile "/hero/hero")
