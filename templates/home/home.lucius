@@ -54,7 +54,7 @@ header nav ul li{
     position: absolute;
     width: 100vw;
     height: 100vh;
-    background-image: url(@{StaticR img_bg01_jpg});
+    background: url(@{StaticR img_bg01_jpg});
     background-size: cover;
     display: flex;
     flex-direction: column;
