@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css?family=Cookie&display=swap');
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+header{
+    height: 75px;
+    background-color: rgba(25, 26, 25, 0.596);
+    color: #E3D081;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+    align-self: center;
+    box-shadow: 0 0 5px 0px #000;    
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif !important;
+}
+
+header.tiny{
+    position: relative;
+    top: 25px;
+    width: 70vw;
+}
+
+header.full{
+    width: 100vw;
+}
+
+header nav ul{
+    list-style:none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-evenly;
+    width: 300px;
+}
+header nav ul li{
+    text-transform: uppercase;
+    font-size: .8em;
+}
+
+.hero-container{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(@{StaticR img_bg01_jpg});
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: -1;
+}
+.hero-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 200px;
+    font-size: 2em;
+    color: #E3D081;
+    width: 500px;
+}
+.hero-title, .hero-span{
+    font-family: 'Cookie', cursive !important;
+    text-shadow: 0 0 5px #000;
+}
+.hero-span {
+    margin-top: -20px;
+}
+.hero-button{
+    padding: 20px 75px;
+    outline: none;
+    border: 0;
+    text-transform: uppercase;
+    color: #E3D081;
+    background-color: rgba(235, 101, 52, 0.74);
+}
+.hero-button:hover{
+    background-color: rgba(235, 101, 52, 0.993);
+}
+

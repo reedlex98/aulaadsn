@@ -1,0 +1,23 @@
+<header>
+    <div class="logo-container">
+        <h2 class="logo">
+            Cook Time!
+    <nav>
+        <ul>
+            <li>
+                <a href=""></a>
+                Inicio
+            <li>
+                About
+            <li>
+                <a href=@{DishesR}>
+                    Dish Search
+<div class="hero-container" >
+    <div class="hero-text">
+        <h1 class="hero-title">
+            - Cook Time -
+        <p class="hero-span">
+            <a href=@{DishesR}>
+                Busque por diversas receitas e comece a cozinhar!
+        <button class="hero-button">
+            Iniciar

@@ -15,7 +15,5 @@ import Text.Julius
 getDishesR :: Handler Html
 getDishesR = do 
     defaultLayout $ do
-        headerSize <- lookupSession "full"
-        toWidgetHead $(luciusFile "templates/general/general.lucius")
-        $(widgetFile "/header/header")
+        addStylesheetRemote "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
         $(widgetFile "/dishes/dishes")
