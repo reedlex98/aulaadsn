@@ -11,15 +11,15 @@
         <li>
             <a href="">
                 <i class="fa fa-book">
-                    Envie sua receita
+                Envie sua receita
         <li>
             <a href="">
                 <i class="fa fa-user-plus">
-                    Cadastre-se
+                Cadastre-se
         <li>
             <a href="">
                 <i class="fa fa-sign-in">
-                    Entrar
+                Entrar
         
 <div class="recipe-categories">
     <ul class="categories">
@@ -103,94 +103,94 @@
                         <i class="fa fa-heart" style="color:red">
                         <span>276
             
-<div class="highlight-video">
-    <div class="cards">
-        <div class="card">
-            <div class="card-img">
-                <img src=@{StaticR img_dish5_webp} alt="">
-            <div class="content">
-                <div class="category">
-                    Massas
-                <div class="title">
-                    <a href="#">
-                        Macarrão com requeijão 
-                <div class="author">
-                    por: 
-                        <strong>
-                            CookTime!
-                <div class="likes">
-                    <i class="fa fa-heart" style="color:red">
-                    <span>376
+    <div class="highlight-video">
+        <div class="cards">
+            <div class="card">
+                <div class="card-img">
+                    <img src=@{StaticR img_dish5_webp} alt="">
+                <div class="content">
+                    <div class="category">
+                        Massas
+                    <div class="title">
+                        <a href="#">
+                            Macarrão com requeijão 
+                    <div class="author">
+                        por: 
+                            <strong>
+                                CookTime!
+                    <div class="likes">
+                        <i class="fa fa-heart" style="color:red">
+                        <span>376
+                        
+            <div class="card">
+                <div class="card-img">
+                    <img src=@{StaticR img_dish6_webp} alt="">
+                
+                <div class="content">
+                    <div class="category">
+                        Massas
+                    
+                    <div class="title">
+                        <a href="#">
+                            Panquecas com frango
+                        
+                    <div class="author">
+                        por: 
+                            <strong>
+                                CookTime!
+                            
+                    <div class="likes">
+                        <i class="fa fa-heart" style="color:red">
+                        <span>9999
+                        
+        <div class="video">
+            <img src=@{StaticR img_dish4_jpg} alt="prato">      
     
-        <div class="card">
-            <div class="card-img">
-                <img src=@{StaticR img_dish6_webp} alt="">
-            
-            <div class="content">
-                <div class="category">
-                    Massas
-                
-                <div class="title">
-                    <a href="#">
-                        Panquecas com frango
-                
-                <div class="author">
-                    por: 
-                        <strong>
-                            CookTime!
-                
-                <div class="likes">
-                    <i class="fa fa-heart" style="color:red">
-                    <span>9999
-    
-    <div class="video">
-        <img src=@{StaticR img_dish4_jpg} alt="prato">      
-    
-<div class="highlight-video">
-    <div class="video">
-        <img src=@{StaticR img_dish7_jpg} alt="prato">
-    
-    <div class="cards">
-        <div class="card">
-            <div class="card-img">
-                <img src=@{StaticR img_dish8_webp} alt="">
-            
-            <div class="content">
-                <div class="category">
-                    Sopas
-                
-                <div class="title">
-                    <a href="#">
-                        Sopa de cebola
-                
-                <div class="author">
-                    por: 
-                        <strong>
-                            CookTime!
-                
-                <div class="likes">
-                    <i class="fa fa-heart" style="color:red">
-                    <span>232
+    <div class="highlight-video">
+        <div class="video">
+            <img src=@{StaticR img_dish7_jpg} alt="prato">
         
-        <div class="card">
-            <div class="card-img">
-                <img src=@{StaticR img_dish9_webp} alt="">
-            
-            <div class="content">
-                <div class="category">
-                    Sopas
+        <div class="cards">
+            <div class="card">
+                <div class="card-img">
+                    <img src=@{StaticR img_dish8_webp} alt="">
                 
-                <div class="title">
-                    <a href="#">Caldo Verde
+                <div class="content">
+                    <div class="category">
+                        Sopas
+                    
+                    <div class="title">
+                        <a href="#">
+                            Sopa de cebola
+                        
+                    <div class="author">
+                        por: 
+                            <strong>
+                                CookTime!
+                            
+                    <div class="likes">
+                        <i class="fa fa-heart" style="color:red">
+                        <span>232
+                        
+            <div class="card">
+                <div class="card-img">
+                    <img src=@{StaticR img_dish9_webp} alt="">
                 
-                <div class="author">
-                    por: 
-                        <strong>
-                            CookTime!
-                
-                <div class="likes">
-                    <i class="fa fa-heart" style="color:red">
-                    <span>122
+                <div class="content">
+                    <div class="category">
+                        Sopas
+                    
+                    <div class="title">
+                        <a href="#">Caldo Verde
+                        
+                    <div class="author">
+                        por: 
+                            <strong>
+                                CookTime!
+                            
+                    <div class="likes">
+                        <i class="fa fa-heart" style="color:red">
+                        <span>122
         
                 
     
