@@ -36,7 +36,7 @@ getDishesR = do
                                 <i class="fa fa-user">
                                 #{nome}
                         <li>
-                            <a href="#">
+                            <a href=@{NewDish}>
                                 <i class="fa fa-book">
                                 Envie sua receita
                         <li>

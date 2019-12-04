@@ -209,7 +209,7 @@ label{
     margin-bottom: 15px;
 }
 
-.control-group input[type="text"],.control-group input[type="email"],.control-group input[type="password"], .control-group input[type="textarea"]{
+.control-group input[type="text"],.control-group input[type="email"],.control-group input[type="password"], .control-group input[type="number"], .control-group textarea{
     color: #a0a0a0;
     background-color: #f0f0f0;
     border-radius: 10px;
