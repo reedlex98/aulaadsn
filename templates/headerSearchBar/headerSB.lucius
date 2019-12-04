@@ -130,6 +130,8 @@
 
 .nav-buttons li form button{
     background-color: var(--bg-color);
+    border: none;
+    outline: none;
 }
 
 .nav-buttons li a:hover,  .nav-buttons li form button:hover{
