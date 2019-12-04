@@ -128,7 +128,9 @@
 
 }
 
-
+.nav-buttons li form button{
+    background-color: var(--bg-color);
+}
 
 .nav-buttons li a:hover,  .nav-buttons li form button:hover{
 
