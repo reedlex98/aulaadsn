@@ -78,11 +78,11 @@ getNewDishR = do
                 <div class="content-container">
                     <div class="register-container">
                         <h1>
-                        Nova Receita
+                            Nova Receita
                         
-                    <form method=post action=@{NewDishR}>
-                        ^{widget}
-                        <input type="submit" value="Cadastrar">
+                        <form method=post action=@{NewDishR}>
+                            ^{widget}
+                            <input type="submit" value="Cadastrar">
             $nothing
                 redirect EntrarR
         |]
