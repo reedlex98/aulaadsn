@@ -112,7 +112,7 @@
 
 
 
-.nav-buttons li a{
+.nav-buttons li a, .nav-buttons li form button{
 
     display: flex;
 
@@ -130,7 +130,7 @@
 
 
 
-.nav-buttons li a:hover{
+.nav-buttons li a:hover,  .nav-buttons li form button:hover{
 
     opacity: 1;
 
@@ -138,7 +138,7 @@
 
 
 
-.nav-buttons li a i{
+.nav-buttons li a i,  .nav-buttons li form button i{
 
     font-size: 2em;
 

@@ -45,7 +45,7 @@ getDishesR = do
                                     Sair
                     $nothing 
                         <li>
-                            <a href=@{UsuarioR}>
+                            <a href=@{EntrarR}>
                                 <i class="fa fa-book">
                                 Envie sua receita
                         <li>
