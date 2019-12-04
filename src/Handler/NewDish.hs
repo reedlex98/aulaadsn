@@ -13,7 +13,7 @@ import Text.Lucius
 import Text.Julius
 
 -- renderDivs
-formReceita :: Form Receita 
+formReceita :: Form (Receita, Text, Text, Int) 
 formReceita = renderBootstrap $ (,)
     <$> (Receita 
         <$> areq textField "Nome: " Nothing
