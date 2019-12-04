@@ -1,4 +1,5 @@
 function deslogar(){
+    console.log("hey look at me")
     $.post({
         url: @{SairR},
         success(){
