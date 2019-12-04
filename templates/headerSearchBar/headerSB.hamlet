@@ -7,15 +7,25 @@
         <button class="search-button">
             <i class="fa fa-search">
     <ul class="nav-buttons">
-        <li>
-            <a href="">
-                <i class="fa fa-book">
-                Envie sua receita
-        <li>
-            <a href="">
-                <i class="fa fa-user-plus">
-                Cadastre-se
-        <li>
-            <a href="">
-                <i class="fa fa-sign-in">
-                Entrar
+        $maybe nome <- sess
+            <li>
+                <a href="">
+                    <i class="fa fa-book">
+                    Envie sua receita
+            <li>
+                <a href=@{SairR}>
+                    <i class="fa fa-sign-out">
+                    Sair
+        $nothing 
+            <li>
+                <a href=@{UsuarioR}>
+                    <i class="fa fa-book">
+                    Envie sua receita
+            <li>
+                <a href=@{UsuarioR}>
+                    <i class="fa fa-user-plus">
+                    Cadastre-se
+            <li>
+                <a href=@{EntrarR}>
+                    <i class="fa fa-sign-in">
+                    Entrar
