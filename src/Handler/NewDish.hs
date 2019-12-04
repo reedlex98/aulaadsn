@@ -78,7 +78,7 @@ getNewDishR = do
                 <div class="content-container">
                     <div class="register-container">
                         <h1>
-                            Nova Receita
+                            Enviar Receita
                         
                         <form method=post action=@{NewDishR}>
                             ^{widget}
