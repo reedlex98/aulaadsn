@@ -227,4 +227,10 @@ form input[type="submit"]{
     background-color: var(--bg-color);
     border-radius: 15px;
     cursor: pointer;
+    opacity: .7;
+}
+
+
+form input[type="submit"]:hover{
+    opacity: .1;
 }
