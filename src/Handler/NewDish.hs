@@ -13,9 +13,9 @@ import Text.Lucius
 import Text.Julius
 
 -- renderDivs
-formProduto :: Form Produto 
-formProduto = renderBootstrap $ (,)
-    <$> (Produto 
+formReceita :: Form Receita 
+formReceita = renderBootstrap $ (,)
+    <$> (Receita 
         <$> areq textField "Nome: " Nothing
         <*> areq textareaField "Ingredientes: " Nothing
         <*> areq textareaField "Modo de preparo: " Nothing
@@ -24,7 +24,7 @@ formProduto = renderBootstrap $ (,)
 
 getNewDishR :: Handler Html
 getNewDishR = do 
-    (widget,enctype) <- generateFormPost formProduto 
+    (widget,enctype) <- generateFormPost formReceita 
     defaultLayout $ do 
         msg <- getMessage
         [whamlet|
@@ -42,10 +42,10 @@ getNewDishR = do
 
 postNewDishR :: Handler Html
 postNewDishR = do 
-    ((result,_),_) <- runFormPost formProduto
+    ((result,_),_) <- runFormPost formReceita
     case result of 
-        FormSuccess produto -> do 
-            runDB $ insert produto
+        FormSuccess receita -> do 
+            runDB $ insert receita
             setMessage [shamlet|
                 <h2>
                     PRODUTO INSERIDO COM SUCESSO
@@ -53,15 +53,15 @@ postNewDishR = do
             redirect NewDishR
         _ -> redirect HomeR
 
-getListProdR :: Handler Html 
-getListProdR = do 
-    -- select * from Produto order by produto.nome
-    produtos <- runDB $ selectList [] [Asc ProdutoNome]
-    defaultLayout $ do 
-        $(whamletFile "templates/produtos.hamlet")
+-- getListProdR :: Handler Html 
+-- getListProdR = do 
+--     -- select * from Produto order by produto.nome
+--     produtos <- runDB $ selectList [] [Asc ProdutoNome]
+--     defaultLayout $ do 
+--         $(whamletFile "templates/produtos.hamlet")
 
-postApagarProdR :: ProdutoId -> Handler Html
-postApagarProdR pid = do 
-    _ <- runDB $ get404 pid
-    runDB $ delete pid
-    redirect ListProdR
+-- postApagarProdR :: ProdutoId -> Handler Html
+-- postApagarProdR pid = do 
+--     _ <- runDB $ get404 pid
+--     runDB $ delete pid
+--     redirect ListProdR
