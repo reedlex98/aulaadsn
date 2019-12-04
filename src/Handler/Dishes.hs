@@ -19,6 +19,7 @@ getDishesR = do
         addStylesheet (StaticR css_variablesEGeneral_css)
         sess <- lookupSession "_NOME"
         -- $(widgetFile "/headerSearchBar/headerSB")
+        $(luciusFile "/headerSearchBar/headerSB.lucius")
         [whamlet|
             <nav class="navigation">
             <div class="logo">
