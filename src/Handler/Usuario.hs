@@ -49,7 +49,7 @@ getUsuarioR = do
                                 <i class="fa fa-user">
                                 #{nome}
                         <li>
-                            <a href=@{NewDish}>
+                            <a href=@{NewDishR}>
                                 <i class="fa fa-book">
                                 Envie sua receita
                         <li>
