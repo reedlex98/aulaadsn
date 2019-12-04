@@ -29,7 +29,7 @@ getUsuarioR = do
         toWidgetHead $(luciusFile "templates/register/register.lucius")
         addStylesheetRemote "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
         addStylesheet (StaticR css_variablesEGeneral_css)
-        $(widgetFile "/headerSearchBar/headerSB")
+        -- $(widgetFile "/headerSearchBar/headerSB")
         $(widgetFile "/categoriesBar/categories")
         [whamlet|
             $maybe mensa <- msg
