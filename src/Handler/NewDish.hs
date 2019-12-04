@@ -24,6 +24,8 @@ formReceita = renderBootstrap $ Receita
 getNewDishR :: Handler Html
 getNewDishR = do 
     (widget,enctype) <- generateFormPost formReceita 
+    msg <- getMessage
+    sess <- lookupSession "_NOME"
     defaultLayout $ do 
         toWidgetHead $(luciusFile "templates/register/register.lucius")
         addStylesheetRemote "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -31,10 +33,12 @@ getNewDishR = do
         toWidgetHead $(luciusFile "templates/headerSearchBar/headerSB.lucius")
         $(widgetFile "/categoriesBar/categories")
         setTitle "Cook Time! Porque a hora de cozinhar é agora | Nova Receita"
-        msg <- getMessage
-        sess <- lookupSession "_NOME"
         [whamlet|
             $maybe nome <- sess
+                $maybe mensa <- msg
+                    <div>
+                        ^{mensa}
+                
                 <nav class="navigation">
                     <div class="logo">
                         <strong>
@@ -71,9 +75,7 @@ getNewDishR = do
                                 <a href=@{EntrarR}>
                                     <i class="fa fa-sign-in">
                                     Entrar
-                $maybe mensa <- msg
-                    <div>
-                        ^{mensa}
+
                 
                 <div class="content-container">
                     <div class="register-container">
