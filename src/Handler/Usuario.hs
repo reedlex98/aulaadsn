@@ -25,10 +25,9 @@ getUsuarioR :: Handler Html
 getUsuarioR = do 
     (widget,_) <- generateFormPost formUsu
     msg <- getMessage
-    addStyle
-    toWidgetHead $(luciusFile "templates/register/register.lucius")
 
     defaultLayout $ do
+        toWidgetHead $(luciusFile "templates/register/register.lucius")
         addStylesheet (StaticR css_variablesEGeneral_css)
         $(widgetFile "/headerSearchBar/headerSB")
         $(widgetFile "/categoriesBar/categories")
