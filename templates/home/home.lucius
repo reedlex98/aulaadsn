@@ -83,7 +83,7 @@ header nav ul li{
     padding: 20px 75px;
     outline: none;
     border: 0;
-    text-transform: uppercase;
+    font-size: 0.5em;
     color: #E3D081;
     background-color: rgba(235, 101, 52, 0.74);
 }
