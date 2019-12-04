@@ -60,7 +60,7 @@ postUsuarioR = do
                 redirect UsuarioR
             else do 
                 setMessage [shamlet|
-                    <div class="msg success">
+                    <div class="msg failure">
                         SENHA E VERIFICACAO N CONFEREM
                 |]
                 redirect UsuarioR
