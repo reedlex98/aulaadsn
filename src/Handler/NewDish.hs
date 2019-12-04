@@ -14,12 +14,11 @@ import Text.Julius
 
 -- renderDivs
 formReceita :: Form Receita 
-formReceita = renderBootstrap $ (,)
-    <$> (Receita 
+formReceita = renderBootstrap $ Receita 
         <$> areq textField "Nome: " Nothing
         <*> areq textareaField "Ingredientes: " Nothing
         <*> areq textareaField "Modo de preparo: " Nothing
-        <*> areq intField "Tempo de preparo: " Nothing)
+        <*> areq intField "Tempo de preparo: " Nothing
 
 
 getNewDishR :: Handler Html
