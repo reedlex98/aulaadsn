@@ -7,7 +7,7 @@ Usuario
 
 Receita 
     nome  Text 
-    ingredientes Text
-    modoDePreparo Text
+    ingredientes Textarea
+    modoDePreparo Textarea
     tempoDePreparo Int
     deriving Show
