@@ -17,6 +17,7 @@ getDishesR = do
     defaultLayout $ do
         addStylesheetRemote "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
         addStylesheet (StaticR css_variablesEGeneral_css)
+        sess <- lookupSession "_NOME"
         $(widgetFile "/headerSearchBar/headerSB")
         $(widgetFile "/categoriesBar/categories")
         $(widgetFile "/dishes/dishes")

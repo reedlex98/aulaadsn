@@ -18,6 +18,5 @@
             - Cook Time -
         <p class="hero-span">
             Busque por diversas receitas e comece a cozinhar!
-        <button class="hero-button">
-            <a href=@{DishesR}>
-                Iniciar
+        <a class="hero-button" href=@{DishesR}>
+            Iniciar
