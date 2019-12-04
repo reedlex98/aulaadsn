@@ -42,6 +42,7 @@ import Handler.Home
 import Handler.Login
 import Handler.Usuario
 import Handler.Dishes
+import Handler.NewDish
 
 -- This line actually creates our YesodDispatch instance. It is the second half
 -- of the call to mkYesodData which occurs in Foundation.hs. Please see the

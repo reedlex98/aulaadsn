@@ -15,6 +15,7 @@ import Text.Julius
 getDishesR :: Handler Html
 getDishesR = do 
     defaultLayout $ do
+        setTitle "Cook Time! Porque a hora de cozinhar é agora | Receitas"
         addStylesheetRemote "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
         addStylesheet (StaticR css_variablesEGeneral_css)
         sess <- lookupSession "_NOME"

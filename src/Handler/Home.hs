@@ -15,4 +15,5 @@ import Text.Julius
 getHomeR :: Handler Html
 getHomeR = do 
     defaultLayout $ do
+        setTitle "Cook Time! Porque a hora de cozinhar é agora"
         $(widgetFile "/home/home")

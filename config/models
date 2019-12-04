@@ -4,3 +4,10 @@ Usuario
     senha Text
     UniqueEmailRest email
     deriving Show
+
+Receita 
+    nome  Text 
+    ingredientes Text
+    modoDePreparo Text
+    tempoDePreparo Int
+    deriving Show

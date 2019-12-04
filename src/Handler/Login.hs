@@ -24,6 +24,7 @@ getEntrarR = do
     msg <- getMessage
     defaultLayout $ do
         toWidgetHead $(luciusFile "templates/register/register.lucius")
+        setTitle "Cook Time! Porque a hora de cozinhar é agora | Login"
         addStylesheetRemote "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"  
         addStylesheet (StaticR css_variablesEGeneral_css)
         toWidgetHead $(luciusFile "templates/headerSearchBar/headerSB.lucius")

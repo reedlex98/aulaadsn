@@ -31,6 +31,7 @@ getUsuarioR = do
         addStylesheet (StaticR css_variablesEGeneral_css)
         toWidgetHead $(luciusFile "templates/headerSearchBar/headerSB.lucius")
         $(widgetFile "/categoriesBar/categories")
+        setTitle "Cook Time! Porque a hora de cozinhar é agora | Cadastro"
         sess <- lookupSession "_NOME"
         [whamlet|
             <nav class="navigation">
