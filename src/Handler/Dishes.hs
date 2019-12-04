@@ -16,6 +16,7 @@ getDishesR :: Handler Html
 getDishesR = do 
     defaultLayout $ do
         addStylesheetRemote "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        addScriptRemote "https://code.jquery.com/jquery-3.4.1.min.js"
         addStylesheet (StaticR css_variablesEGeneral_css)
         sess <- lookupSession "_NOME"
         toWidgetHead $(luciusFile "templates/headerSearchBar/headerSB.lucius")
@@ -31,11 +32,11 @@ getDishesR = do
                 <ul class="nav-buttons">
                     $maybe nome <- sess
                         <li>
-                            <a href="">
+                            <a onclick="deslogar()">
                                 <i class="fa fa-user">
                                 #{nome}
                         <li>
-                            <a href="">
+                            <a href="#">
                                 <i class="fa fa-book">
                                 Envie sua receita
                         <li>

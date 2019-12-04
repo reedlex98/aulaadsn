@@ -1,0 +1,8 @@
+function deslogar(){
+    $.post({
+        url: @{SairR},
+        success(){
+            window.location = @{HomeR}
+        }
+    })
+}
