@@ -27,11 +27,9 @@ getUsuarioR = do
     msg <- getMessage
     defaultLayout $ do
         toWidgetHead $(luciusFile "templates/register/register.lucius")
-        addScriptRemote "https://code.jquery.com/jquery-3.4.1.min.js"
         addStylesheetRemote "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
         addStylesheet (StaticR css_variablesEGeneral_css)
         toWidgetHead $(luciusFile "templates/headerSearchBar/headerSB.lucius")
-        toWidgetHead $(juliusFile "templates/headerSearchBar/headerSB.julius")
         $(widgetFile "/categoriesBar/categories")
         sess <- lookupSession "_NOME"
         [whamlet|
@@ -54,9 +52,10 @@ getUsuarioR = do
                                 <i class="fa fa-book">
                                 Envie sua receita
                         <li>
-                            <a onclick="deslogar()">
-                                <i class="fa fa-sign-out">
-                                Sair
+                            <form action=@{SairR} method="POST">
+                                <button>
+                                    <i class="fa fa-sign-out">
+                                    Sair
                     $nothing 
                         <li>
                             <a href=@{UsuarioR}>
