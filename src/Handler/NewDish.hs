@@ -33,56 +33,58 @@ getNewDishR = do
         toWidgetHead $(luciusFile "templates/headerSearchBar/headerSB.lucius")
         $(widgetFile "/categoriesBar/categories")
         setTitle "Cook Time! Porque a hora de cozinhar é agora | Nova Receita"
-        [whamlet|   
-            <nav class="navigation">
-                <div class="logo">
-                    <strong>
-                        Cook Time!
-                <div class="search-form">
-                    <input class="search-input" name="search-recipe" type="text" placeholder="Encontre uma receita...">
-                    <button class="search-button">
-                        <i class="fa fa-search">
-                <ul class="nav-buttons">
-                    $maybe nome <- sess
-                        <li>
-                            <a href="#">
-                                <i class="fa fa-user">
-                                #{nome}
-                        <li>
-                            <a href=@{NewDishR}>
-                                <i class="fa fa-book">
-                                Envie sua receita
-                        <li>
-                            <form action=@{SairR} method="POST">
-                                <button>
-                                    <i class="fa fa-sign-out">
-                                    Sair
-                    $nothing 
-                        <li>
-                            <a href=@{EntrarR}>
-                                <i class="fa fa-book">
-                                Envie sua receita
-                        <li>
-                            <a href=@{UsuarioR}>
-                                <i class="fa fa-user-plus">
-                                Cadastre-se
-                        <li>
-                            <a href=@{EntrarR}>
-                                <i class="fa fa-sign-in">
-                                Entrar
-
-            $maybe mensa <- msg
-                <div>
-                    ^{mensa}
+        [whamlet|
+            $maybe nome <- sess
+                <nav class="navigation">
+                    <div class="logo">
+                        <strong>
+                            Cook Time!
+                    <div class="search-form">
+                        <input class="search-input" name="search-recipe" type="text" placeholder="Encontre uma receita...">
+                        <button class="search-button">
+                            <i class="fa fa-search">
+                    <ul class="nav-buttons">
+                        $maybe nome <- sess
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-user">
+                                    #{nome}
+                            <li>
+                                <a href=@{NewDishR}>
+                                    <i class="fa fa-book">
+                                    Envie sua receita
+                            <li>
+                                <form action=@{SairR} method="POST">
+                                    <button>
+                                        <i class="fa fa-sign-out">
+                                        Sair
+                        $nothing 
+                            <li>
+                                <a href=@{EntrarR}>
+                                    <i class="fa fa-book">
+                                    Envie sua receita
+                            <li>
+                                <a href=@{UsuarioR}>
+                                    <i class="fa fa-user-plus">
+                                    Cadastre-se
+                            <li>
+                                <a href=@{EntrarR}>
+                                    <i class="fa fa-sign-in">
+                                    Entrar
+                $maybe mensa <- msg
+                    <div>
+                        ^{mensa}
                 
-            <div class="content-container">
-                <div class="register-container">
-                    <h1>
-                        Enviar Receita
-                    
-                    <form method=post action=@{NewDishR}>
-                        ^{widget}
-                        <input type="submit" value="Cadastrar">
+                <div class="content-container">
+                    <div class="register-container">
+                        <h1>
+                            Enviar Receita
+                        
+                        <form method=post action=@{NewDishR}>
+                            ^{widget}
+                            <input type="submit" value="Cadastrar">
+            $nothing
+                redirect EntrarR
         |]
 
 postNewDishR :: Handler Html
