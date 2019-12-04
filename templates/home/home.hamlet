@@ -17,7 +17,7 @@
         <h1 class="hero-title">
             - Cook Time -
         <p class="hero-span">
-            <a href=@{DishesR}>
-                Busque por diversas receitas e comece a cozinhar!
+            Busque por diversas receitas e comece a cozinhar!
         <button class="hero-button">
-            Iniciar
+            <a href=@{DishesR}>
+                Iniciar

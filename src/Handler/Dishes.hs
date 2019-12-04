@@ -16,4 +16,7 @@ getDishesR :: Handler Html
 getDishesR = do 
     defaultLayout $ do
         addStylesheetRemote "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        addStylesheet (StaticR css_variablesEGeneral_css)
+        $(widgetFile "/headerSearchBar/headerSB")
+        $(widgetFile "/categoriesBar/categories")
         $(widgetFile "/dishes/dishes")

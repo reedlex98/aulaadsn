@@ -25,18 +25,26 @@ getUsuarioR :: Handler Html
 getUsuarioR = do 
     (widget,_) <- generateFormPost formUsu
     msg <- getMessage
-    defaultLayout $ 
+    addStyle
+    toWidgetHead $(luciusFile "templates/register/register.lucius")
+
+    defaultLayout $ do
+        addStylesheet (StaticR css_variablesEGeneral_css)
+        $(widgetFile "/headerSearchBar/headerSB")
+        $(widgetFile "/categoriesBar/categories")
         [whamlet|
-            $maybe mensa <- msg 
-                <div>
-                    ^{mensa}
+            $maybe mensa <- msg
             
-            <h1>
-                CADASTRO DE USUARIO
+            ^{mensa}
             
-            <form method=post action=@{UsuarioR}>
-                ^{widget}
-                <input type="submit" value="Cadastrar">
+            <div class="content-container">
+                <div class="register-container">
+                    <h1>
+                        CADASTRO DE USUARIO
+                    
+                    <form method=post action=@{UsuarioR}>
+                        ^{widget}
+                        <input type="submit" value="Cadastrar">
         |]
 
 postUsuarioR :: Handler Html
@@ -47,13 +55,13 @@ postUsuarioR = do
             if (usuarioSenha usuario == veri) then do 
                 runDB $ insert usuario 
                 setMessage [shamlet|
-                    <div>
+                    <div class="msg success">
                         USUARIO INCLUIDO
                 |]
                 redirect UsuarioR
             else do 
                 setMessage [shamlet|
-                    <div>
+                    <div class="msg success">
                         SENHA E VERIFICACAO N CONFEREM
                 |]
                 redirect UsuarioR

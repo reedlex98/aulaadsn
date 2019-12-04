@@ -1,0 +1,39 @@
+/* general */
+
+*{
+    font-family: sans-serif;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-body);
+}
+
+a{
+    text-decoration: none !important;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+:root{
+    --bg-color: rgb(255, 106, 40);
+    --bg-color-darker: rgb(235, 86, 20);
+    --fg-color: white;
+    --fg-color-reverse: black;
+    --fg-color-reverse-dk: #777;
+    --bg-body: #dddddd
+}
+
+.navigation, .recipe-categories{
+    z-index: 1;
+}

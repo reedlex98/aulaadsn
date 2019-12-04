@@ -1,0 +1,21 @@
+<nav class="navigation">
+    <div class="logo">
+        <strong>
+            Cook Time!
+    <div class="search-form">
+        <input class="search-input" name="search-recipe" type="text" placeholder="Encontre uma receita...">
+        <button class="search-button">
+            <i class="fa fa-search">
+    <ul class="nav-buttons">
+        <li>
+            <a href="">
+                <i class="fa fa-book">
+                Envie sua receita
+        <li>
+            <a href="">
+                <i class="fa fa-user-plus">
+                Cadastre-se
+        <li>
+            <a href="">
+                <i class="fa fa-sign-in">
+                Entrar
