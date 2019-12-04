@@ -92,7 +92,7 @@ postEntrarR = do
            case usuario of 
                 Nothing -> do 
                     setMessage [shamlet|
-                        <div>
+                        <div class="msg failure">
                             Não conseguimos encontrar o seu e-mail!
                     |]
                     redirect EntrarR
@@ -102,7 +102,7 @@ postEntrarR = do
                         redirect DishesR
                     else do 
                         setMessage [shamlet|
-                            <div>
+                            <div class="msg failure">
                                 A senha não é válida!
                         |]
                         redirect EntrarR 
