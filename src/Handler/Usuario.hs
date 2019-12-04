@@ -32,6 +32,7 @@ getUsuarioR = do
         addStylesheet (StaticR css_variablesEGeneral_css)
         $(widgetFile "/headerSearchBar/headerSB")
         $(widgetFile "/categoriesBar/categories")
+        msg <- getMessage
         [whamlet|
             $maybe mensa <- msg
             
