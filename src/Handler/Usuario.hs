@@ -29,9 +29,44 @@ getUsuarioR = do
         toWidgetHead $(luciusFile "templates/register/register.lucius")
         addStylesheetRemote "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
         addStylesheet (StaticR css_variablesEGeneral_css)
-        -- $(widgetFile "/headerSearchBar/headerSB")
+        toWidgetHead $(luciusFile "templates/headerSearchBar/headerSB.lucius")
         $(widgetFile "/categoriesBar/categories")
         [whamlet|
+            <nav class="navigation">
+                <div class="logo">
+                    <strong>
+                        Cook Time!
+                <div class="search-form">
+                    <input class="search-input" name="search-recipe" type="text" placeholder="Encontre uma receita...">
+                    <button class="search-button">
+                        <i class="fa fa-search">
+                <ul class="nav-buttons">
+                    $maybe nome <- sess
+                        <li>
+                            <a href="">
+                                <i class="fa fa-user">
+                                #{nome}
+                        <li>
+                            <a href="">
+                                <i class="fa fa-book">
+                                Envie sua receita
+                        <li>
+                            <a href=@{SairR}>
+                                <i class="fa fa-sign-out">
+                                Sair
+                    $nothing 
+                        <li>
+                            <a href=@{UsuarioR}>
+                                <i class="fa fa-book">
+                                Envie sua receita
+                        <li>
+                            <a href=@{UsuarioR}>
+                                <i class="fa fa-user-plus">
+                                Cadastre-se
+                        <li>
+                            <a href=@{EntrarR}>
+                                <i class="fa fa-sign-in">
+                                Entrar
             $maybe mensa <- msg
                 <div>
                     ^{mensa}
@@ -55,13 +90,13 @@ postUsuarioR = do
                 runDB $ insert usuario 
                 setMessage [shamlet|
                     <div class="msg success">
-                        USUARIO INCLUIDO
+                        Usuario cadastrado com sucesso!
                 |]
                 redirect UsuarioR
             else do 
                 setMessage [shamlet|
                     <div class="msg failure">
-                        SENHA E VERIFICACAO N CONFEREM
+                        O campo de senha e o de verificação precisam ter o mesmo valor!
                 |]
                 redirect UsuarioR
         _ -> redirect HomeR

@@ -22,18 +22,59 @@ getEntrarR :: Handler Html
 getEntrarR = do 
     (widget,_) <- generateFormPost formLogin
     msg <- getMessage
-    defaultLayout $ 
+    defaultLayout $ do
+        toWidgetHead $(luciusFile "templates/register/register.lucius")
+        addStylesheetRemote "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        addStylesheet (StaticR css_variablesEGeneral_css)
+        toWidgetHead $(luciusFile "templates/headerSearchBar/headerSB.lucius")
+        $(widgetFile "/categoriesBar/categories")
         [whamlet|
+            <nav class="navigation">
+                <div class="logo">
+                    <strong>
+                        Cook Time!
+                <div class="search-form">
+                    <input class="search-input" name="search-recipe" type="text" placeholder="Encontre uma receita...">
+                    <button class="search-button">
+                        <i class="fa fa-search">
+                <ul class="nav-buttons">
+                    $maybe nome <- sess
+                        <li>
+                            <a href="">
+                                <i class="fa fa-user">
+                                #{nome}
+                        <li>
+                            <a href="">
+                                <i class="fa fa-book">
+                                Envie sua receita
+                        <li>
+                            <a href=@{SairR}>
+                                <i class="fa fa-sign-out">
+                                Sair
+                    $nothing 
+                        <li>
+                            <a href=@{UsuarioR}>
+                                <i class="fa fa-book">
+                                Envie sua receita
+                        <li>
+                            <a href=@{UsuarioR}>
+                                <i class="fa fa-user-plus">
+                                Cadastre-se
+                        <li>
+                            <a href=@{EntrarR}>
+                                <i class="fa fa-sign-in">
+                                Entrar
             $maybe mensa <- msg 
                 <div>
                     ^{mensa}
-            
-            <h1>
-                ENTRAR
-            
-            <form method=post action=@{EntrarR}>
-                ^{widget}
-                <input type="submit" value="Entrar">
+            <div class="content-container">
+                <div class="register-container">
+                    <h1>
+                        Login
+                    
+                    <form method=post action=@{EntrarR}>
+                        ^{widget}
+                        <input type="submit" value="Entrar">
         |]
 
 postEntrarR :: Handler Html
@@ -50,7 +91,7 @@ postEntrarR = do
                 Nothing -> do 
                     setMessage [shamlet|
                         <div>
-                            E-mail N ENCONTRADO!
+                            Não conseguimos encontrar o seu e-mail!
                     |]
                     redirect EntrarR
                 Just (Entity _ usu) -> do 
@@ -60,7 +101,7 @@ postEntrarR = do
                     else do 
                         setMessage [shamlet|
                             <div>
-                                Senha INCORRETA!
+                                A senha não é válida!
                         |]
                         redirect EntrarR 
         _ -> redirect HomeR
@@ -74,7 +115,7 @@ getAdminR :: Handler Html
 getAdminR = do 
     defaultLayout [whamlet|
         <h1>
-            BEM-VINDO MEU REI!
+            Bem-vindo!
     |]
 
 

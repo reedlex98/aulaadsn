@@ -18,7 +18,6 @@ getDishesR = do
         addStylesheetRemote "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
         addStylesheet (StaticR css_variablesEGeneral_css)
         sess <- lookupSession "_NOME"
-        -- $(widgetFile "/headerSearchBar/headerSB")
         toWidgetHead $(luciusFile "templates/headerSearchBar/headerSB.lucius")
         [whamlet|
             <nav class="navigation">
@@ -31,6 +30,10 @@ getDishesR = do
                         <i class="fa fa-search">
                 <ul class="nav-buttons">
                     $maybe nome <- sess
+                        <li>
+                            <a href="">
+                                <i class="fa fa-user">
+                                #{nome}
                         <li>
                             <a href="">
                                 <i class="fa fa-book">
