@@ -36,7 +36,7 @@ getUsuarioR = do
         [whamlet|
             $maybe mensa <- msg
             
-            ^{mensa}
+                ^{mensa}
             
             <div class="content-container">
                 <div class="register-container">
