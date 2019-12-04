@@ -43,7 +43,7 @@ getEntrarR = do
                 <ul class="nav-buttons">
                     $maybe nome <- sess
                         <li>
-                            <a onclick="deslogar()">
+                            <a href="#">
                                 <i class="fa fa-user">
                                 #{nome}
                         <li>
@@ -51,7 +51,7 @@ getEntrarR = do
                                 <i class="fa fa-book">
                                 Envie sua receita
                         <li>
-                            <a href=@{SairR}>
+                            <a onclick="deslogar()">
                                 <i class="fa fa-sign-out">
                                 Sair
                     $nothing 
