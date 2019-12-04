@@ -33,8 +33,10 @@ getEntrarR = do
         [whamlet|
             <nav class="navigation">
                 <div class="logo">
-                    <strong>
-                        Cook Time!
+                    <div class="logo">
+                        <a href=@{DishesR}>
+                            <strong>
+                                Cook Time!
                 <div class="search-form">
                     <input class="search-input" name="search-recipe" type="text" placeholder="Encontre uma receita...">
                     <button class="search-button">

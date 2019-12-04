@@ -1,6 +1,7 @@
 <header class="tiny">
     <div class="logo-container">
         <h2 class="logo">
+            <a href=@{DishesR}></a>
             Cook Time!
     <nav>
         <ul>
