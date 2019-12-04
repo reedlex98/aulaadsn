@@ -28,14 +28,15 @@ getUsuarioR = do
 
     defaultLayout $ do
         toWidgetHead $(luciusFile "templates/register/register.lucius")
+        addStylesheetRemote "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
         addStylesheet (StaticR css_variablesEGeneral_css)
         $(widgetFile "/headerSearchBar/headerSB")
         $(widgetFile "/categoriesBar/categories")
         msg <- getMessage
         [whamlet|
             $maybe mensa <- msg
-            
-                ^{mensa}
+                <div>
+                    ^{mensa}
             
             <div class="content-container">
                 <div class="register-container">
