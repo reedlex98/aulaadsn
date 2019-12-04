@@ -99,14 +99,14 @@ postEntrarR = do
                 Just (Entity _ usu) -> do 
                     if (usuarioSenha usu == senha) then do
                         setSession "_NOME" (usuarioNome usu)
-                        redirect HomeR
+                        redirect DishesR
                     else do 
                         setMessage [shamlet|
                             <div>
                                 A senha não é válida!
                         |]
                         redirect EntrarR 
-        _ -> redirect HomeR
+        _ -> redirect DishesR
 
 postSairR :: Handler Html 
 postSairR = do 

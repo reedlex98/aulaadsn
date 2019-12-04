@@ -226,4 +226,5 @@ form input[type="submit"]{
     color: white;
     background-color: var(--bg-color);
     border-radius: 15px;
+    cursor: pointer;
 }
