@@ -28,6 +28,7 @@ getEntrarR = do
         addStylesheet (StaticR css_variablesEGeneral_css)
         toWidgetHead $(luciusFile "templates/headerSearchBar/headerSB.lucius")
         $(widgetFile "/categoriesBar/categories")
+        sess <- lookupSession "_NOME"
         [whamlet|
             <nav class="navigation">
                 <div class="logo">
